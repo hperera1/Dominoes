@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bprbnswk4112q"]
+
+[ext_resource type="PackedScene" uid="uid://yfwlw2u468ex" path="res://Assets/Domino.tscn" id="1_s6nde"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 264.0
+offset_bottom = 128.0
+
+[node name="Control" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+offset_right = 268.0
+offset_bottom = 128.0
+theme_override_constants/separation = 16
+
+[node name="Domino" parent="Control" instance=ExtResource("1_s6nde")]
+
+[node name="Domino2" parent="Control" instance=ExtResource("1_s6nde")]
+
+[node name="Domino3" parent="Control" instance=ExtResource("1_s6nde")]

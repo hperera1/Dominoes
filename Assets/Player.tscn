@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://qhnuab3kv8ve"]
+
+[ext_resource type="Script" path="res://Code/Player.cs" id="1_ahp5o"]
+
+[node name="PlayerRoot" type="Node2D"]
+script = ExtResource("1_ahp5o")
+
+[node name="DominoHand" type="HBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -324.0
+offset_top = -96.0
+offset_right = 276.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 56
+alignment = 1

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://celi466omtdbc"]
+
+[ext_resource type="Script" path="res://Code/GameController.cs" id="1_pygpn"]
+[ext_resource type="PackedScene" uid="uid://qhnuab3kv8ve" path="res://Assets/Player.tscn" id="2_qkhvh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1neo"]
+size = Vector2(648, 648)
+
+[node name="GameRoot" type="Node2D"]
+script = ExtResource("1_pygpn")
+player_scene = ExtResource("2_qkhvh")
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Player1" type="Node2D" parent="Players"]
+position = Vector2(828, 624)
+
+[node name="Player2" type="Node2D" parent="Players"]
+position = Vector2(828, 104)
+
+[node name="Player3" type="Node2D" parent="Players"]
+position = Vector2(568, 364)
+
+[node name="Player4" type="Node2D" parent="Players"]
+position = Vector2(1088, 364)
+
+[node name="PlayArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
+position = Vector2(828, 324)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_j1neo")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
