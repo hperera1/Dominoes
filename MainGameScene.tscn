@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://celi466omtdbc"]
 
 [ext_resource type="Script" path="res://Code/GameController.cs" id="1_pygpn"]
-[ext_resource type="PackedScene" uid="uid://qhnuab3kv8ve" path="res://Assets/Player.tscn" id="2_qkhvh"]
+[ext_resource type="PackedScene" uid="uid://qhnuab3kv8ve" path="res://Assets/Prefabs/Player.tscn" id="2_41nc6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1neo"]
 size = Vector2(648, 648)
 
 [node name="GameRoot" type="Node2D"]
 script = ExtResource("1_pygpn")
-player_scene = ExtResource("2_qkhvh")
+player_scene = ExtResource("2_41nc6")
 
 [node name="Players" type="Node2D" parent="."]
 
@@ -31,9 +31,3 @@ position = Vector2(828, 324)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_j1neo")
 metadata/_edit_lock_ = true
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0

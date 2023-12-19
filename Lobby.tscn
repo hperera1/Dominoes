@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1jix65bv0ycd"]
+
+[ext_resource type="Script" path="res://Code/Lobby.cs" id="2_pkgh2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1088.0
+offset_bottom = -520.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 192.0
+offset_right = 832.0
+offset_bottom = 240.0
+text = "Domino Lobby"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 248.0
+offset_right = 736.0
+offset_bottom = 400.0
+script = ExtResource("2_pkgh2")
+
+[node name="AddressLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 48.0
+text = "Address"
+
+[node name="Address" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 304.0
+offset_bottom = 71.0
+text = "127.0.0.1"
+alignment = 1
+
+[node name="HostButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 80.0
+offset_right = 96.0
+offset_bottom = 104.0
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 80.0
+offset_right = 288.0
+offset_bottom = 111.0
+text = "Join"
+
+[node name="StatusOk" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 120.0
+offset_right = 312.0
+offset_bottom = 143.0
+
+[node name="StatusFail" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 120.0
+offset_right = 312.0
+offset_bottom = 143.0
+
+[connection signal="pressed" from="Panel/HostButton" to="Panel" method="OnHostPressed"]
+[connection signal="pressed" from="Panel/JoinButton" to="Panel" method="OnJoinPressed"]

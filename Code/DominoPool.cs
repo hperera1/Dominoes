@@ -12,7 +12,7 @@ public partial class DominoPool {
 
 	public DominoPool(string domino_file) {
 		GD.Print("domino pool constructor.");
-		domino_scene = ResourceLoader.Load<PackedScene>("res://Assets/Domino.tscn");
+		domino_scene = ResourceLoader.Load<PackedScene>("res://Assets/Prefabs/Domino.tscn");
 		GenerateDominos(domino_file);
 	}
 

@@ -10,6 +10,9 @@ public partial class GameController : Node2D {
 	private int player_count = 2;
 	private List<Node2D> player_nodes = new List<Node2D>();
 	private List<Player> players = new List<Player>(); 
+	private byte player_in_turn = 0;
+	private bool game_over = false;
+	private bool round_over = false;
 
 	private DominoPool domino_pool;
 	private int domino_hand_max = 10;
@@ -30,7 +33,11 @@ public partial class GameController : Node2D {
 	}
 
 	public override void _Process(double delta) {
-		
+		if (!game_over) {
+			if (!round_over) {
+
+			}
+		}
 	}
 
 	private void StartGame() {
@@ -53,5 +60,10 @@ public partial class GameController : Node2D {
 				players[j].AddDominoToHand(new_domino);
 			}
 		}
+	}
+	
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true)]
+	private void TestFunction() {
+		Rpc("RunFunction", true);
 	}
 }
