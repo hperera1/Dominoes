@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://q55msie7e213"]
+
+[ext_resource type="Script" path="res://Scripts/Lobby.cs" id="1_q78au"]
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 448.0
+offset_bottom = 184.0
+script = ExtResource("1_q78au")
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 71.0
+offset_bottom = 103.0
+text = "Address:"
+
+[node name="PlayerLabel" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 75.0
+offset_bottom = 47.0
+text = "Name:"
+
+[node name="Address" type="LineEdit" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 432.0
+offset_bottom = 104.0
+text = "127.0.0.1"
+
+[node name="PlayerName" type="LineEdit" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 432.0
+offset_bottom = 48.0
+text = "Hubert"
+
+[node name="HostButton" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 160.0
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+text = "Join"
+
+[node name="StartButton" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 160.0
+text = "Start"
+
+[connection signal="pressed" from="Control/Panel/HostButton" to="Control/Panel" method="OnHostPressed"]
+[connection signal="pressed" from="Control/Panel/JoinButton" to="Control/Panel" method="OnJoinPressed"]
+[connection signal="pressed" from="Control/Panel/StartButton" to="Control/Panel" method="OnStartPressed"]
